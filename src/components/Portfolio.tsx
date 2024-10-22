@@ -84,7 +84,7 @@ const Portfolio = () => {
               <Image
                 src={project.src}
                 alt={project.title}
-                className='h-[250px] md:h-[350px] max-w-[500px] object-cover border rounded border-gray-700'
+                className='h-[200px] md:h-[300px] max-w-[500px] object-cover border rounded border-gray-700'
               />
             </div>
           </motion.div>
