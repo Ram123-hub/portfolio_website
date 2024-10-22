@@ -2,33 +2,52 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
-import project1 from "@/assets/proj1.jpg";
-import project2 from "@/assets/proj2.jpg";
+import portfolio from "@/assets/portfolio.png"
+import organicStore from "@/assets/organicStore.png"
+import imageGallery from "@/assets/imgaeGallery.png"
+import journeyThroughTime from "@/assets/journeyThroughTime.png"
+import petParade from "@/assets/petparade.png"
 
 const projects = [
   {
     title: "Portfolio Website",
     desc: "A personal portfolio website showcasing my projects, blogs, and resume.",
     devStack: "React, Next.js, Tailwind CSS",
-    link: "https://portfolio.example.com",
-    git: "https://github.com/username/portfolio-website",
-    src: project1,
+    link: "https://vercel.live/link/portfolio-website-one-ebon-60.vercel.app?via=project-dashboard-alias-list&p=1&page=/",
+    git: "https://github.com/Ram123-hub/portfolio_website",
+    src:portfolio,
   },
   {
-    title: "E-commerce Platform",
+    title: "organic Store",
     desc: "A full-stack e-commerce application with payment integration and product management.",
-    devStack: "Node.js, Express, MongoDB, React",
-    link: "https://ecommerce.example.com",
-    git: "https://github.com/username/ecommerce-platform",
-    src: project2,
+    devStack: "Next.js , MongoDB, TailwindCSS , ReduxDev Tool kit, Shadcn library",
+    link: "https://vercel.live/link/organic-store-three-lovat.vercel.app?via=project-dashboard-alias-list&p=1&page=/",
+    git: "https://github.com/Ram123-hub/organic_store",
+    src: organicStore,
   },
   {
-    title: "Chat Application",
-    desc: "Real-time chat application with user authentication and message persistence.",
-    devStack: "Socket.io, Node.js, React",
-    link: "https://chatapp.example.com",
-    git: "https://github.com/username/chat-application",
-    src: project1,
+    title: "Image Gallery",
+    desc: "The Image Gallery built in next js with the help of pexel API. You can search and download image from the gallery",
+    devStack: "Next.js , Pexels API, TailwindCSS , ",
+    link: "https://vercel.live/link/gallery-rouge-theta.vercel.app?via=project-dashboard-alias-list&p=1&page=/",
+    git: "https://github.com/Ram123-hub/gallery",
+    src: imageGallery,
+  },
+  {
+    title: "Journey Through Time",
+    desc: "Journey Through Time is an interactive web experience that allows users to explore significant historical events across different eras. Using engaging visuals and informative content, the project aims to bring history to life, making learning both fun and immersive. Perfect for history enthusiasts and curious learners alike.",
+    devStack: "Next.js, MongoDB, TailwindCSS, Shadcn library",
+    link: "https://vercel.live/link/journey-through-time-roan.vercel.app?via=project-dashboard-alias-list&p=1&page=/",
+    git: "https://github.com/Ram123-hub/Journey-Through-Time",
+    src: journeyThroughTime
+  },
+  {
+    title: "pet parade",
+    desc: "Pet Parade is a joyful platform dedicated to celebrating pets and their stories. Users can share heartwarming moments, get expert advice, and explore the unique adventures of animal companions. Whether you're a proud pet owner or just love animals, Pet Parade offers a welcoming community for all.",
+    devStack: "Next.js , MongoDB, TailwindCSS , Shadcn library",
+    link: "https://vercel.live/link/pet-parade.vercel.app?via=project-dashboard-alias-list&p=1&page=/",
+    git: "https://github.com/Ram123-hub/pet-parade",
+    src: petParade
   },
 ];
 
@@ -65,7 +84,7 @@ const Portfolio = () => {
               <Image
                 src={project.src}
                 alt={project.title}
-                className='h-[250px] md:h-[350px] w-full max-w-[500px] object-cover border rounded border-gray-700'
+                className='h-[250px] md:h-[350px] max-w-[500px] object-cover border rounded border-gray-700'
               />
             </div>
           </motion.div>
