@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import cursor from "@/assets/icon1.png";
@@ -18,16 +18,20 @@ const Hero = () => {
       </div>
 
       <div className='relative flex flex-col items-center'>
-        {/* Title Text */}
-        <div className='text-4xl md:text-6xl lg:text-8xl font-bold text-center mt-12 md:mt-0'>
+        {/* Title Text with Increased Z-Index */}
+        <div className='text-4xl md:text-6xl lg:text-8xl font-bold text-center mt-12 md:mt-0 z-10'>
           <h1 className='text-[#98B4CE]'>Hi, I am</h1>
           <h1 className='text-[#E48A57]'>RamKumar Raghuwanshi</h1>
         </div>
 
-        {/* Draggable Icons */}
+        {/* Draggable Icons with Left and Right Entrance */}
         <motion.div
-          className='hidden md:block absolute left-[50px] md:left-[280px] top-[70px] md:top-[170px]'
+          className='hidden md:block absolute left-[50px] md:left-[280px] top-[70px] md:top-[170px] z-0'
           drag
+          dragConstraints={{ top: -50, left: -100, right: 100, bottom: 100 }} // Restrict drag area
+          initial={{ opacity: 0, x: -100 }}  // Animate from the left
+          animate={{ opacity: 1, x: 0 }}     // Move to final position
+          transition={{ duration: 1, delay: 0.5 }}  // Smooth transition with delay
         >
           <Image
             src={cursor}
@@ -37,9 +41,14 @@ const Hero = () => {
             draggable="false"
           />
         </motion.div>
+
         <motion.div
-          className='hidden md:block absolute left-[30px] md:left-[220px] top-[-30px] md:top-[20px]'
+          className='hidden md:block absolute right-[50px] md:right-[280px] top-[70px] md:top-[170px] z-0'
           drag
+          dragConstraints={{ top: -50, left: -100, right: 100, bottom: 100 }} // Restrict drag area
+          initial={{ opacity: 0, x: 100 }}  // Animate from the right
+          animate={{ opacity: 1, x: 0 }}    // Move to final position
+          transition={{ duration: 1, delay: 1 }}  // Smooth transition with delay
         >
           <Image
             src={lightning}
